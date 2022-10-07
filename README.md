@@ -34,3 +34,4 @@ Update in progress...
 - [规范Git commit - 知乎(zhihu.com)](https://zhuanlan.zhihu.com/p/182553920)
 - [修改在VSCode中python程序的每行字符数限制 - 简书(jianshu.com)](https://www.jianshu.com/p/dfa4c2ce71d6)
 - [git撤销上次commit提交 - CDDN(blog.csdn.net)](https://blog.csdn.net/weixin_44953227/article/details/106387824)
+- [添加许可到仓库](https://docs.github.com/cn/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository)
