@@ -1,0 +1,9 @@
+# vscode
+.vscode
+
+# jupyter notebook
+.ipynb_checkpoints
+
+# temp files
+test.ipynb
+*.tmp
