@@ -7,3 +7,6 @@
 # temp files
 test.ipynb
 *.tmp
+
+# executables
+*.exe
