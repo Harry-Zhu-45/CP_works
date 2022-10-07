@@ -22,6 +22,13 @@ Update in progress...
 - [homework 4](https://www.wolai.com/66X8w6CfMompYeu7PyQaD3)
 - [homework 5](https://www.wolai.com/wLet1geHqdf2sLnwnWsJGE)
 
+## Other Project
+
+- [NSfunction](./otherProject/NSfunction/)
+  - Solve the NS fuction, written in Fortran
+  - Data saved as txt files
+  - Drawing dynamic graph with python
+
 ## Reference
 
 - [规范Git commit - 知乎(zhihu.com)](https://zhuanlan.zhihu.com/p/182553920)
