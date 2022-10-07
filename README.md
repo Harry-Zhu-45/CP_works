@@ -24,4 +24,5 @@ Update in progress...
 
 ## Reference
 
-- [如何规范你的Git commit - 知乎(zhihu.com)](https://zhuanlan.zhihu.com/p/182553920)
+- [规范Git commit - 知乎(zhihu.com)](https://zhuanlan.zhihu.com/p/182553920)
+- [修改在VSCode中python程序的每行字符数限制 - 简书(jianshu.com)](https://www.jianshu.com/p/dfa4c2ce71d6)
