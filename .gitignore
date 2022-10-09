@@ -4,6 +4,9 @@
 # jupyter notebook
 .ipynb_checkpoints
 
+# python cache
+__pycache__/
+
 # temp files
 test.ipynb
 *.tmp
