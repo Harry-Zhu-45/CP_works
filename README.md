@@ -13,6 +13,7 @@ Update in progress...
 - [Chapter 3 Errors & Uncertainties in Computations](https://www.wolai.com/6p6GyEXihCcttz8xr7MfMp)
 - [Chapter 4 Monte Carlo: Randomness, Walks & Decays](https://www.wolai.com/qZM4YCFkrkUhDQdJs8YBMW)
 - [Chapter 5 Differentiation & Integration](https://www.wolai.com/r9RV6B6a6MM8wVBNxS3Bbp)
+- [Chapter 6 Matrix Computing](https://www.wolai.com/wyV54GDoiYBczC6Zys49zg)
 
 ## Homeworks
 
@@ -21,6 +22,7 @@ Update in progress...
 - [homework 3](https://www.wolai.com/cAEEpV45BG7CS5SgqihbN9)
 - [homework 4](https://www.wolai.com/66X8w6CfMompYeu7PyQaD3)
 - [homework 5](https://www.wolai.com/wLet1geHqdf2sLnwnWsJGE)
+- [homework 6](https://www.wolai.com/sPABBGABbG6eAePWwybbKq)
 
 ## Other Project
 
@@ -35,3 +37,8 @@ Update in progress...
 - [修改在VSCode中python程序的每行字符数限制 - 简书(jianshu.com)](https://www.jianshu.com/p/dfa4c2ce71d6)
 - [git撤销上次commit提交 - CDDN(blog.csdn.net)](https://blog.csdn.net/weixin_44953227/article/details/106387824)
 - [添加许可到仓库](https://docs.github.com/cn/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository)
+- [PyGame: A Primer on Game Programming in Python – Real Python](https://realpython.com/pygame-a-primer/)
+- [PyGame Tutorial - GeeksforGeeks](https://www.geeksforgeeks.org/pygame-tutorial/)
+- [tutorials - pygame wiki](https://www.pygame.org/wiki/tutorials)
+- [Pygame 官方文档中译版 - CSDN](https://blog.csdn.net/Enderman_xiaohei/article/details/87708373)
+- [免费的GPU——colab使用教程](https://zhuanlan.zhihu.com/p/149233850)
