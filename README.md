@@ -30,6 +30,10 @@ Update in progress...
   - Solve the NS fuction, written in Fortran
   - Data saved as txt files
   - Drawing dynamic graph with python
+- [vanderwaals](./otherProject/vanderwaals/)
+  - Regard $N_2$ as van der Waals gas
+  - Calculate nitrogen's critical temperature, critical volume and critical pressure.
+  - Plot nitrogen's van der Waals isothermal curve.
 
 ## Reference
 
