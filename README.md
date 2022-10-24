@@ -47,3 +47,8 @@ Update in progress...
 - [tutorials - pygame wiki](https://www.pygame.org/wiki/tutorials)
 - [Pygame 官方文档中译版 - CSDN](https://blog.csdn.net/Enderman_xiaohei/article/details/87708373)
 - [免费的GPU——colab使用教程](https://zhuanlan.zhihu.com/p/149233850)
+- [RadicalSkeptic/Computational-Physics-beginner](https://github.com/RadicalSkeptic/Computational-Physics-beginner)
+- [WuShichao/computational-physics](https://github.com/WuShichao/computational-physics)
+- [zhangii/python-and-physics](https://github.com/zhangii/python-and-physics)
+- [physics-codes/examples](https://github.com/physics-codes/examples)
+- [jackfrued/Python-100-Days](https://github.com/jackfrued/Python-100-Days)
