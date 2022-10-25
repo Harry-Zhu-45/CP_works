@@ -35,6 +35,7 @@ Update in progress...
   - Regard $N_2$ as van der Waals gas
   - Calculate nitrogen's critical temperature, critical volume and critical pressure.
   - Plot nitrogen's van der Waals isothermal curve.
+- [Lorenz_attractor](./otherProject/Lorenz_attractor/)
 
 ## Reference
 
