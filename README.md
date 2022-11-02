@@ -24,6 +24,8 @@ Update in progress...
 - [homework 5](https://www.wolai.com/wLet1geHqdf2sLnwnWsJGE)
 - [homework 6](https://www.wolai.com/sPABBGABbG6eAePWwybbKq)
 - [homework 7](https://www.wolai.com/8RBmtidm6EacLzpucbcxjA)
+- [homework 8](https://www.wolai.com/2JV4BZ7ymTkrqLURSaPtwn)
+- [homework 9](https://www.wolai.com/3B7WcS2kC5wYXCrusF3srJ)
 
 ## Other Project
 
