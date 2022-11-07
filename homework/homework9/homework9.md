@@ -62,3 +62,9 @@ plt.show()
 ```
 
 ![output](./output.png)
+
+## 小黑子 pygame
+
+门锁拍照.jpg
+
+![jntm](./jntm.png)
