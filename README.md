@@ -38,6 +38,9 @@ Update in progress...
   - Calculate nitrogen's critical temperature, critical volume and critical pressure.
   - Plot nitrogen's van der Waals isothermal curve.
 - [Lorenz_attractor](./otherProject/Lorenz_attractor/)
+- [Curve_Fitting](./otherProject/Curve_Fitting/)
+  - data from experiment 3
+  - curve fitting
 
 ## Reference
 
