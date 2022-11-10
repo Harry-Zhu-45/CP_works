@@ -6,6 +6,11 @@ Almost all code is written in `Jupyter Notebook`.
 
 Update in progress...
 
+## Textbooks
+
+- Computational Physics - Problem Solving with Python (Rubin H.Landau, Manuel J. Paez and Cristian C. Bordeianu)
+- Computational Physics (Nicholas J. Giordano, Hisao Nakanishi)
+
 ## Handouts
 
 - [Chapter 1 Introduction](https://www.wolai.com/ipVk3gcUkud2YTKwZEPb7K)
