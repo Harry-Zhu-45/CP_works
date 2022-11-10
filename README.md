@@ -6,12 +6,12 @@ Almost all code is written in `Jupyter Notebook`.
 
 Update in progress...
 
-## Textbooks
+## TEXTBOOKS
 
 - Computational Physics - Problem Solving with Python (Rubin H.Landau, Manuel J. Paez and Cristian C. Bordeianu)
 - Computational Physics (Nicholas J. Giordano, Hisao Nakanishi)
 
-## Handouts
+## HANDOUTS
 
 - [Chapter 1 Introduction](https://www.wolai.com/ipVk3gcUkud2YTKwZEPb7K)
 - [Chapter 2 Computing Software Basics](https://www.wolai.com/xzAurnKH2wVNSgnKzZy6H4?theme=light)
@@ -20,7 +20,7 @@ Update in progress...
 - [Chapter 5 Differentiation & Integration](https://www.wolai.com/r9RV6B6a6MM8wVBNxS3Bbp)
 - [Chapter 6 Matrix Computing](https://www.wolai.com/wyV54GDoiYBczC6Zys49zg)
 
-## Homeworks
+## HOMEWORKS
 
 - [homework 01](https://www.wolai.com/sWPQ6uNrg2wF3CyfoTwsSS)
 - [homework 02](https://www.wolai.com/m8M5aMbg2Xd75VTZ2uWDwi)
@@ -48,7 +48,7 @@ Update in progress...
   - data from experiment 3
   - curve fitting
 
-## Reference
+## REFERENCE
 
 - [规范Git commit - 知乎(zhihu.com)](https://zhuanlan.zhihu.com/p/182553920)
 - [修改在VSCode中python程序的每行字符数限制 - 简书(jianshu.com)](https://www.jianshu.com/p/dfa4c2ce71d6)
