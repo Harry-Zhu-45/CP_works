@@ -4,7 +4,8 @@
 # jupyter notebook
 .ipynb_checkpoints
 
-# python cache
+# python
+venv/
 __pycache__/
 
 # temp files
