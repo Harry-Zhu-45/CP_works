@@ -61,7 +61,7 @@ fig.colorbar(im, ax=ax)
 plt.show()
 ```
 
-![output](./output.png)
+![output](./Relaxation_method.png)
 
 ## 小黑子 pygame
 
