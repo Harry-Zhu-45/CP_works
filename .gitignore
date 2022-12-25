@@ -14,3 +14,14 @@ test.ipynb
 
 # executables
 *.exe
+
+# tex files
+*.aux
+*.bbl
+*.blg
+*.log
+*.fls
+*.fdb_latexmk
+*.out
+*.synctex.gz
+*.synctex(busy)
