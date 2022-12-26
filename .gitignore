@@ -18,10 +18,14 @@ test.ipynb
 # tex files
 *.aux
 *.bbl
+*.bcf
 *.blg
+*-blx.bib
+*.run.xml
 *.log
 *.fls
 *.fdb_latexmk
 *.out
 *.synctex.gz
 *.synctex(busy)
+*.pyg
