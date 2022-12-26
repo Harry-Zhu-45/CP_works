@@ -1,9 +1,15 @@
+"""
+This file contains functions to add various patterns to the percolation model
+"""
 from PercolationModel import PercolationModel2D
 
 
 def add_block(cell: PercolationModel2D, icentre: int, jcentre: int):
     """
-    Add a 2x2 block into the system, with bottom left corner (icentre, jcentre)
+    Add a 2x2 block into the system, with bottom left corner (icentre, jcentre), invariant
+    like this:
+        xx\n
+        xx\n
     """
     extent = 2
     cell.clear(icentre, jcentre, extent)                 # clear the space
@@ -12,7 +18,11 @@ def add_block(cell: PercolationModel2D, icentre: int, jcentre: int):
 
 def add_beehive(cell: PercolationModel2D, icentre: int, jcentre: int):
     """
-    Add a beehive into the system, with (icentre, jcentre) being the inner left blank square
+    Add a beehive into the system, with (icentre, jcentre) being the inner left blank square, invariant
+    like this:
+        oxxo\n
+        xoox\n
+        oxxo\n
     """
     extent = 7
     cell.clear(icentre, jcentre, extent)
@@ -24,7 +34,9 @@ def add_beehive(cell: PercolationModel2D, icentre: int, jcentre: int):
 
 def add_blinker(cell: PercolationModel2D, icentre: int, jcentre: int):
     """
-    Add a vertical line of 3 blocks (period 1)
+    Add a horizontal line of 3 blocks, a period 2 oscillator
+    like this:
+        xxx\n
     """
     extent = 4
     cell.clear(icentre, jcentre, extent)
@@ -33,7 +45,12 @@ def add_blinker(cell: PercolationModel2D, icentre: int, jcentre: int):
 
 def add_loaf(cell: PercolationModel2D, icentre: int, jcentre: int):
     """
-    Add a loaf, with (icentre, jcentre) in the bottom left corner (blank)
+    Add a loaf, invariant
+    like this:
+        ooxo\n
+        oxox\n
+        xoox\n
+        oxxo\n
     """
     cell.grid[icentre, jcentre+1:jcentre+3] = 1
     cell.grid[icentre+1:icentre+3, jcentre+3] = 1
@@ -42,31 +59,47 @@ def add_loaf(cell: PercolationModel2D, icentre: int, jcentre: int):
     cell.grid[icentre+3, jcentre+2] = 1
 
 
-def add_boat(cell: PercolationModel2D, icentre, jcentre):
+def add_boat(cell: PercolationModel2D, icentre: int, jcentre: int):
     """
-    Adds a boat, with (icentre,jcentre) in the bottom left corner (blank)
+    Add a boat, invariant
+    like this:
+        xxo\n
+        xox\n
+        oxo\n
     """
     extent = 4
     cell.clear(icentre, jcentre, extent)
 
     indices = cell.getVonNeumannNeighbourhood(icentre, jcentre)
-    # print(indices)
     for element in indices:
         cell.grid[element[0], element[1]] = 1
 
     cell.grid[icentre+1, jcentre-1] = 1
 
 
-def add_toad(cell: PercolationModel2D, icentre, jcentre):
+def add_toad(cell: PercolationModel2D, icentre: int, jcentre: int):
+    """
+    Add a toad, a period 2 oscillator
+    like this:
+        xo\n
+        xx\n
+        xx\n
+        ox\n
+    """
     extent = 3
     cell.clear(icentre, jcentre, extent)
     cell.grid[icentre-1:icentre+2, jcentre] = 1
     cell.grid[icentre:icentre+3, jcentre-1] = 1
 
 
-def add_beacon(cell: PercolationModel2D, icentre, jcentre):
+def add_beacon(cell: PercolationModel2D, icentre: int, jcentre: int):
     """
-    Adds two 2x2 blocks, which repeat a pattern of period 2
+    Add two 2x2 blocks, a period 2 oscillator
+    like this:
+        xxoo\n
+        xxoo\n
+        ooxx\n
+        ooxx\n
     """
     extent = 3
     cell.clear(icentre, jcentre, extent)
@@ -74,28 +107,27 @@ def add_beacon(cell: PercolationModel2D, icentre, jcentre):
     add_block(cell, icentre, jcentre+2)
 
 
-def add_pulsar(cell: PercolationModel2D, icentre, jcentre):
+def add_pulsar(cell: PercolationModel2D, icentre: int, jcentre: int):
     """
-    Adds a pulsar, a period 3 oscillator
+    Add a pulsar, a period 3 oscillator
     """
     extent = 8
     cell.clear(icentre, jcentre, extent)
 
     # Start with inner cross
-
-    # North
+    # # North
     cell.grid[icentre+2:icentre+5, jcentre+1] = 1
     cell.grid[icentre+2:icentre+5, jcentre-1] = 1
 
-    # South
+    # # South
     cell.grid[icentre-4:icentre-1, jcentre+1] = 1
     cell.grid[icentre-4:icentre-1, jcentre-1] = 1
 
-    # East
+    # # East
     cell.grid[icentre+1, jcentre+2:jcentre+5] = 1
     cell.grid[icentre-1, jcentre+2:jcentre+5] = 1
 
-    # West
+    # # West
     cell.grid[icentre+1, jcentre-4:jcentre-1] = 1
     cell.grid[icentre-1, jcentre-4:jcentre-1] = 1
 
@@ -109,22 +141,31 @@ def add_pulsar(cell: PercolationModel2D, icentre, jcentre):
     cell.grid[icentre-6, jcentre-4:jcentre-1] = 1
     cell.grid[icentre-4:icentre-1, jcentre-6] = 1
 
-    cell.grid[icentre+2: icentre+5, jcentre-6] = 1
+    cell.grid[icentre+2:icentre+5, jcentre-6] = 1
     cell.grid[icentre+6, jcentre-4:jcentre-1] = 1
 
 
-def add_glider(cell: PercolationModel2D, icentre, jcentre):
+def add_glider(cell: PercolationModel2D, icentre: int, jcentre: int):
     """
-    Adds a glider, with (icentre,jcentre) being the bottom left tile (alive)
+    Add a glider, a period 4 oscillator
+    like this:
+        oxo\n
+        oox\n
+        xxx\n
     """
     cell.grid[icentre, jcentre:jcentre+3] = 1
     cell.grid[icentre+1, jcentre+2] = 1
     cell.grid[icentre+2, jcentre+1] = 1
 
 
-def add_spaceship(cell: PercolationModel2D, icentre, jcentre):
+def add_spaceship(cell: PercolationModel2D, icentre: int, jcentre: int):
     """
-    Adds a lightweight spaceship, with (icentre,jcentre) being the bottom left tile (alive)
+    Add a lightweight spaceship, a period 4 oscillator
+    like this:
+        oxoox\n
+        xoooo\n
+        xooox\n
+        xxxxo\n
     """
     cell.grid[icentre, jcentre:jcentre+4] = 1
     cell.grid[icentre:icentre+3, jcentre] = 1
@@ -133,9 +174,9 @@ def add_spaceship(cell: PercolationModel2D, icentre, jcentre):
     cell.grid[icentre+1, jcentre+4] = 1
 
 
-def add_glider_gun(cell: PercolationModel2D, icentre, jcentre):
+def add_glider_gun(cell: PercolationModel2D, icentre: int, jcentre: int):
     """
-    Adds a Gosper glider gun - two blocks with patterns inbetween to set up the gun
+    Add a Gosper glider gun, a period 30 oscillator
     """
     add_block(cell, icentre+5, jcentre+2)
 
