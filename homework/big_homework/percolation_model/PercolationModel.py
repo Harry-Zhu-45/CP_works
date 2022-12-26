@@ -9,12 +9,11 @@ class PercolationModel2D(object):
     def __init__(self, ni):
         """
         Constructe a 2D cellular automaton
-        input:
-            ni: number of cells in each direction
         """
         self.N = ni                # Number of cells in each direction
         self.Ntot = self.N*self.N  # Total number of cells
 
+        # grid init
         self.grid = np.zeros((self.N, self.N))
         self.nextgrid = np.zeros((self.N, self.N))
         self.tested = np.zeros((self.N, self.N))
@@ -30,17 +29,19 @@ class PercolationModel2D(object):
         output:
             `indices`: list of indices corresponding to the Moore Neighbourhood
         """
+        # init
         indices = []
+
+        # 3x3-1 = 8 cells
         for iadd in range(i-1, i+2):
             for jadd in range(j-1, j+2):
                 if (iadd == i and jadd == j):
                     continue  # exclude the cell itself
-
+                # exclude cells outside the grid
                 if (iadd > self.N-1):
                     iadd = iadd - self.N  # periodic boundary conditions
                 if (jadd > self.N-1):
                     jadd = jadd - self.N  # periodic boundary conditions
-
                 indices.append([iadd, jadd])
         return indices
 
@@ -53,17 +54,27 @@ class PercolationModel2D(object):
         output:
             `indices`: list of indices corresponding to the Von Neumann Neighbourhood
         """
+        # init
         indices = []
+
+        # 1x3-1 = 2 cells
         for iadd in range(i-1, i+2):
+            # exclude the cell itself
             if (iadd == i):
                 continue
+
+            # periodic boundary conditions
             if (iadd > self.N-1):
                 iadd = iadd - self.N
             indices.append([iadd, j])
 
+        # 3x1-1 = 2 cells
         for jadd in range(j-1, j+2):
+            # exclude the cell itself
             if (jadd == j):
                 continue
+
+            # periodic boundary conditions
             if (jadd > self.N-1):
                 jadd = jadd - self.N
             indices.append([i, jadd])
@@ -71,9 +82,7 @@ class PercolationModel2D(object):
 
     def check_complete(self):
         """
-        Check if all cells have been tested
-        output:
-            `complete`: boolean, whether the model has completed
+        Check if all cells have been tested, return a boolean, indicating whether the model has completed
         """
         ntested = np.sum(self.tested)   # number of cells that have been tested
         if (ntested == self.N*self.N):  # if all cells have been tested
@@ -133,10 +142,8 @@ class PercolationModel2D(object):
 
                 # If cell contains a coloniser, then decide whether to colonise
                 if (self.grid[i, j] == 1 and self.tested[i, j] == 0):
-                    randtest = np.random.rand()
-
                     # If colonisation occurs
-                    if (randtest < P):
+                    if (np.random.rand() < P):
                         self.nextgrid[i, j] = 1
                         indices = self.getMooreNeighbourhood(i, j)
 
@@ -146,7 +153,8 @@ class PercolationModel2D(object):
                             if (self.grid[element[0], element[1]] == 0):
                                 self.nextgrid[element[0], element[1]] = 1
 
+                    # if colonisation does not occur
                     else:
-                        self.nextgrid[i, j] = -1
+                        self.nextgrid[i, j] = -1  # If colonisation does not occur, then mark cell as tested
 
                     self.tested[i, j] = 1
