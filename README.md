@@ -54,15 +54,14 @@ Update in progress. :smile:
 
 ## REFERENCE
 
-- git
+- Git / GitHub
   - [规范 Git commit - (zhihu.com)](https://zhuanlan.zhihu.com/p/182553920)
   - [git撤销上次commit提交 - (blog.csdn.net)](https://blog.csdn.net/weixin_44953227/article/details/106387824)
-
-- github
+  - [为你的项目创建必要的 .gitignore 文件](https://www.toptal.com/developers/gitignore)
   - [添加许可到仓库 - (github.com)](https://docs.github.com/cn/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository)
 
-- python
-  - [修改在 VSCode 中 python 程序的每行字符数限制 - (jianshu.com)](https://www.jianshu.com/p/dfa4c2ce71d6)
+- Python
+  - [修改在 VSCode 中 Python 程序的每行字符数限制 - (jianshu.com)](https://www.jianshu.com/p/dfa4c2ce71d6)
 
 - PyGame
   - [PyGame: A Primer on Game Programming in Python - (realpython.com)](https://realpython.com/pygame-a-primer/)
@@ -76,5 +75,5 @@ Update in progress. :smile:
   - [zhangii/python-and-physics - (github.com)](https://github.com/zhangii/python-and-physics)
   - [physics-codes/examples - (github.com)](https://github.com/physics-codes/examples)
 
-- other
+- Other
   - [mandelbrotset - (realpython.com)](https://realpython.com/mandelbrot-set-python/)
