@@ -40,7 +40,7 @@ M = \sum\limits_{\alpha} M_\alpha P_\alpha
 \end{align}
 $$
 
-如果粒子自旋的方向不是只有上和下，而是球对称的随机指向，二维的称之为 X-Y  model，三维的称之为 Heisenberg model。
+如果粒子自旋的朝向在二维平面内随机选取，称之为 XY model；如果粒子自旋的朝向在三维空间中随机选取，称之为 Heisenberg model。
 
 ### 平均场论 (MFT)
 
