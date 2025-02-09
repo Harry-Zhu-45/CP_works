@@ -6,12 +6,14 @@ Almost all code files are written in `Jupyter Notebook`.
 
 Update in progress. :smile:
 
-## TEXTBOOKS
+## UNDERGRADUATE
+
+### TEXTBOOKS
 
 - Computational Physics - Problem Solving with Python (Rubin H.Landau, Manuel J. Paez and Cristian C. Bordeianu)
 - Computational Physics (Nicholas J. Giordano, Hisao Nakanishi)
 
-## HANDOUTS
+### HANDOUTS
 
 - [Chapter 1 Introduction](https://www.wolai.com/ipVk3gcUkud2YTKwZEPb7K)
 - [Chapter 2 Computing Software Basics](https://www.wolai.com/xzAurnKH2wVNSgnKzZy6H4)
@@ -20,7 +22,7 @@ Update in progress. :smile:
 - [Chapter 5 Differentiation & Integration](https://www.wolai.com/r9RV6B6a6MM8wVBNxS3Bbp)
 - [Chapter 6 Matrix Computing](https://www.wolai.com/wyV54GDoiYBczC6Zys49zg)
 
-## HOMEWORKS
+### HOMEWORKS
 
 - [homework 01](https://www.wolai.com/sWPQ6uNrg2wF3CyfoTwsSS)
 - [homework 02](https://www.wolai.com/m8M5aMbg2Xd75VTZ2uWDwi)
@@ -34,6 +36,13 @@ Update in progress. :smile:
 - [homework 10](https://www.wolai.com/mAsXGirKouuk4jUpRdPcbv)
 - [homework 11](https://www.wolai.com/di3C5FNWkYh8HUgoP27UAS)
 - [big homework](https://www.wolai.com/ozBCbrPXLFMAR1BwQ6BqWZ)
+
+## POSTGRADUATE
+
+### REFERENCE BOOKS
+
+- [Numerical Recipes](https://numerical.recipes/)
+- An Introduction to Computer Simulation Methods Applications to Physical System (Harvey Gould, Jan Tobochnik, andWolfgang Christian)
 
 ## Other Project
 
