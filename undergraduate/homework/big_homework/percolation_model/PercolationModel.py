@@ -127,9 +127,9 @@ class PercolationModel2D(object):
         self.nextgrid = np.zeros((self.N, self.N))
 
     def ApplyPercolationModelRule(self, P):
-        """
-        Construct the self.nextgrid matrix based on the properties of self.grid
-        Applie the Percolation Model Rules:
+        """Construct the self.nextgrid matrix based on the properties of self.grid
+
+        Apply the Percolation Model Rules:
             1. Cells attempt to colonise their Moore Neighbourhood with probability P
             2. Cells do not make the attempt with probability 1-P
         """

@@ -1,11 +1,12 @@
 import os
 import sys
+
 import imageio.v2 as imageio
 
 
 def create_gif(source, name, duration):
-    """
-    png to gif
+    """png to gif
+
     input:
         source: png file list (sorted)
         name: name of the gif file
@@ -20,8 +21,8 @@ def create_gif(source, name, duration):
 
 
 def main(or_path):
-    """
-    main function
+    """main function
+
     input:
         or_path: the path of the folder which contains the png files
     """
@@ -32,9 +33,9 @@ def main(or_path):
     create_gif(pic_list, gif_name, duration_time)
 
 
-if __name__ == '__main__':
-    parm_list = sys.argv
-    if len(parm_list) != 2:
+if __name__ == "__main__":
+    param_list = sys.argv
+    if len(param_list) != 2:
         print("请输入需要处理的文件夹！")
     else:
-        main(parm_list[1])
+        main(param_list[1])

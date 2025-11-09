@@ -242,7 +242,7 @@ for it in range(1, 100):
     # dFi_dXj(x, deriv, n)
     autograd_dFi_dXj(x, deriv, n)
 
-    B = - f.reshape(n, 1)               # B = - f (a colume vector)
+    B = - f.reshape(n, 1)               # B = - f (a column vector)
     sol = np.linalg.solve(deriv, B)     # solve
     dx = sol[:, 0]                      # take the first column of matrix sol
 

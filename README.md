@@ -1,6 +1,6 @@
 # README
 
-This is a repository to store the handouts and homeworks during the computational class.
+This is a repository to store the handouts and homework during the computational class.
 
 Almost all code files are written in `Jupyter Notebook`.
 
@@ -22,7 +22,7 @@ Update in progress. :smile:
 - [Chapter 5 Differentiation & Integration](https://www.wolai.com/r9RV6B6a6MM8wVBNxS3Bbp)
 - [Chapter 6 Matrix Computing](https://www.wolai.com/wyV54GDoiYBczC6Zys49zg)
 
-### HOMEWORKS
+### HOMEWORK
 
 - [homework 01](https://www.wolai.com/sWPQ6uNrg2wF3CyfoTwsSS)
 - [homework 02](https://www.wolai.com/m8M5aMbg2Xd75VTZ2uWDwi)
@@ -47,7 +47,7 @@ Update in progress. :smile:
 ## Other Project
 
 - [NSfunction](./otherProject/NSfunction/)
-  - Solve the NS fuction, written in Fortran
+  - Solve the NS function, written in Fortran
   - Data saved as txt files
   - Drawing dynamic graph with python
 
