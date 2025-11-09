@@ -215,25 +215,19 @@ $$
 
 > 三阶导数在h=0.00001时，三种数值微分方法与autograd的结果差距开始显现，可以达到$10^{-3}$的精度。
 
-## 阅读书上5.12节，利用高斯求积方法计算自选函数的积分
+## 阅读书上5.12节，利用高斯-勒让德积分方法计算自选函数的积分
 
-### 高斯求积方法
+### 高斯-勒让德积分方法
 
-- [高斯求积方法的权重和选点参考](https://pomax.github.io/bezierinfo/legendre-gauss.html)
-
-从上述网址获取了高斯求积方法所需的合适的选点与权重，并保存为python文件`lgvalues_abscissa.py`、`lgvalues_wrights.py`
-
-数据存储格式为python中的二维列表。
+- [高斯-勒让德积分方法](https://en.wikipedia.org/wiki/Gauss%E2%80%93Legendre_quadrature)
 
 ### 高斯求积方法的实现与比较
 
-被积函数沿用了$sin(x)$
+被积函数沿用了 $\sin(x)$
 
 ```python
-import lgvalues_abscissa as lr
-import lgvalues_weights as lw
-import numpy as np
 import matplotlib.pyplot as plt
+import numpy as np
 import scipy.integrate
 
 
@@ -241,36 +235,37 @@ def integrand(x):
     return np.sin(x)
 
 
-def my_gaussion_quadrature(a=0, b=np.pi, f=np.sin, n=64):
-    try:
-        # make sure the input n is in the table
-        x = lr.legendre_roots[n]
-        w = lw.quadrature_weight[n]
-        find = x[0]  # if the input n is in the table, make sure n does not refer to a empty list
-    except:
-        print("gaussion_quadrature: please check the value of n")
-    else:
-        return (b-a)/2 * sum([w[i]*f((b-a)/2*x[i]+(a+b)/2) for i in range(n)])
+def my_gaussian_quadrature(a=0, b=np.pi, f=np.sin, n=64):
+    # 使用 NumPy 生成勒让德多项式的根和权重
+    x, w = np.polynomial.legendre.leggauss(n)
+    # 线性映射到区间 [a, b]
+    t = 0.5 * (b - a) * x + 0.5 * (a + b)
+    return 0.5 * (b - a) * np.sum(w * f(t))
 
 
-my_integral_result = [my_gaussion_quadrature(a=0, b=51*np.pi, f=integrand, n=i) for i in range(2, 65)]
-scipy_integral_result = [scipy.integrate.quad(integrand, 0, 51*np.pi)[0] for i in range(2, 65)]
+# 积分上限是 51π
+a, b = 0, 51 * np.pi
 
+my_integral_result = [my_gaussian_quadrature(a=a, b=b, f=integrand, n=i) for i in range(50, 65)]
+scipy_integral_result = [scipy.integrate.quad(integrand, a, b)[0] for _ in range(50, 65)]
 
+# plot
 fig, ax = plt.subplots()
-ax.set_title('difference between my_gaussion_quadrature() and scipy.integrate.quad() \n\n $\int_0^{51\pi} sin(x)dx$')
-ax.set_xlabel('number of terms in my gaussion quadrature')
-ax.set_ylabel('integral value')
-# ax.set_yscale('log')
+ax.set_title(
+    r"Difference between my_gaussian_quadrature() and scipy.integrate.quad()"
+    "\n\n $\int_0^{51\pi} \sin(x) \, dx$"
+)
+ax.set_xlabel("Number of terms (n)")
+ax.set_ylabel("Integral value")
 
-ax.plot(range(2, 65), my_integral_result, label='my_gaussion_quadrature()')
-ax.plot(range(2, 65), scipy_integral_result, label='scipy.integrate.quad()')
+ax.plot(range(50, 65), my_integral_result, label="my_gaussian_quadrature()")
+ax.plot(range(50, 65), scipy_integral_result, label="scipy.integrate.quad()", linestyle="--")
 
-ax.legend(loc='best')
+ax.legend(loc="best")
 plt.show()
 ```
 
-由于获取的有关高斯积分法的选点与权重数据包含了$n = 2 \to 64$，所以尝试计算不同项数的区别。
+由于有关高斯积分法的选点与权重数据包含了 $n=2 \to 64$，所以尝试计算不同项数的区别。
 
 以[scipy.integrate.quad()](https://docs.scipy.org/doc/scipy-1.8.1/reference/generated/scipy.integrate.quad.html)为基准，计算了高斯积分在不同项数下的误差。
 
