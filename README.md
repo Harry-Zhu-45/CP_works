@@ -8,7 +8,7 @@ Update in progress. :smile:
 
 ## UNDERGRADUATE
 
-### TEXTBOOKS
+### REFERENCE BOOKS
 
 - Computational Physics - Problem Solving with Python (Rubin H.Landau, Manuel J. Paez and Cristian C. Bordeianu)
 - Computational Physics (Nicholas J. Giordano, Hisao Nakanishi)
@@ -42,15 +42,20 @@ Update in progress. :smile:
   - Data saved as txt files
   - Drawing dynamic graph with python
 
+![NSfunction](./otherProject/NSfunction/lid_driven_flow.gif)
+
 - [vanderwaals](./otherProject/vanderwaals/)
-  - Regard $N_2$ as van der Waals gas
+  - Regard nitrogen as van der Waals gas
   - Calculate nitrogen's critical temperature, critical volume and critical pressure.
   - Plot nitrogen's van der Waals isothermal curve.
 
+![vanderwaals](./otherProject/vanderwaals/N_2_as_van_der_waals_gas.png)
+
 - [Lorenz_attractor](./otherProject/Lorenz_attractor/)
 
+![Lorenz_attractor](./otherProject/Lorenz_attractor/Lorenz_attractor.png)
+
 - [Curve_Fitting](./otherProject/Curve_Fitting/)
-  - data from experiment 3
 
 ## REFERENCE
 
