@@ -2,33 +2,6 @@
 
 > 祝茗 2020302191422
 
-## 修改`3Dshapes.py`程序，将其中注释掉的语句恢复，并发挥自己的创意绘制3D场景
-
-```python
-import numpy as np
-from vpython import *
-
-
-# 创建画布
-scene = canvas(title="Rainbow Arrows")
-scene.width = 500
-scene.height = 500
-scene.range = 30
-
-# 画球
-sphere(pos=vector(0, 0, 0), radius=0.5, color=color.red)
-
-# 画箭头
-n = 20  # 箭头数量
-for i in range(n):
-    for j in range(n):
-        for k in range(n):
-            # 彩色向量场
-            # 向量模长与离原点的距离成正比
-            arrow(pos=vector(i-n/2, j-n/2, k-n/2), axis=vector(i/n-1/2, j/n-1/2, k/n-1/2), color=vector(i/n, j/n, k/n))     # 远离原点
-            arrow(pos=vector(i-n/2, j-n/2, k-n/2), axis=-vector(i/n-1/2, j/n-1/2, k/n-1/2), color=vector(i/n, j/n, k/n))    # 指向原点
-```
-
 ## 修改`EasyMatPlot.py`程序，参考matplotlib图例，绘制自己选择的函数
 
 ```python
@@ -118,10 +91,8 @@ ax4.scatter(x_pi, y_pi, color="blue", s=0.01)
 ax4.scatter(x_not_pi, y_not_pi, color="orange", s=0.01)
 ax4.set_title("Monte Carlo pi = %8.6f\nwhile n = %2.0f" % (count_pi, n))
 
-
-# 展示成果
-plt.tight_layout()  # matplotlib的自动优化，防止坐标轴与标题重叠
+plt.tight_layout()
 plt.show()
 ```
 
-> `plt.tight_layout()`对于不怎么会处理细节的人（比如我），属于是万能解决方案了。
+> `plt.tight_layout()` 非常好用。

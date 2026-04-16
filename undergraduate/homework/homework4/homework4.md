@@ -52,43 +52,30 @@ plt.show()
 ### 使用自己编写的RNG实现2D随机行走
 
 ```python
-# 2D Random Walk (vpython edition)
-from vpython import *
-from IPython.display import IFrame
+# 2D random walk
+import matplotlib.pyplot as plt
 import numpy as np
-import random
+
+jmax = 100000
+
+xlist = np.cumsum(2 * np.random.random(jmax) - 1)
+ylist = np.cumsum(2 * np.random.random(jmax) - 1)
+R = np.sqrt(xlist[-1] ** 2 + ylist[-1] ** 2)
 
 
-scene = canvas(title="Walk 2D")
-scene.width = 500
-scene.height = 500
-scene.range = 90
+fig = plt.figure()
+plt.title("Distance from origin: %.2f" % R)
+plt.xlabel("x")
+plt.ylabel("y")
+plt.axis("equal")
 
+plt.plot(xlist, ylist, "y.-", markersize=0.1 / np.sqrt(jmax))
 
-walk = curve(color=color.yellow, radius=0.1)
-jmax = 10000
-x = 0
-y = 0
-for i in range(0, jmax):
-    # x += 2.0 * random.random() - 1
-    # y += 2.0 * random.random() - 1
-    x += 2.0*lcg()/(1 << 48) - 1
-    y += 2.0*lcg()/(1 << 48) - 1
-    walk.append(pos=(x, y, 0))
-
-
-xaxs = curve(pos=[vector(0, 0, 0), vector(0, 30, 0)], radius=0.2)
-yaxs = curve(pos=[vector(0, 0, 0), vector(30, 0, 0)], radius=0.2)
-xlb = label(x=45, y=3, text="x", height=20)
-ylb = label(x=10, y=30, text="y", height=20)
-R = np.sqrt(x*x+y*y)
-rlb = label(pos=vector(-30, 25, 0), height=20)
-message = "Distance from origin: "
-message += "%.2f" % R
-rlb.text = message
+plt.tight_layout()
+plt.show()
 ```
 
-![vpython_2D_random_walk](./vpythonWalk.png)
+![2D_random_walk](./2D_random_walk.png)
 
 ### 绘制$R_{\mathrm{rms}}$和$\sqrt{N}$之间的关系，和使用random.random()的结果进行比较
 
@@ -277,15 +264,11 @@ plt.show()
 print(step)
 ```
 
-随机行走程，加入不主动碰壁的设定，while True的死循环将于随机行走走入死路时得到终止。
+随机行走程，加入不主动碰壁的设定，`while True` 的死循环将于随机行走走入死路时得到终止。
 
 以不达500步不罢休的气势，取得了589步的成绩，可喜可贺。
 
 ![2DrandomWalk](2DrandomWalk.png)
-
-> 当时还尝试了一下能不能1000步
->
-> 别问后来怎么了，问就是kale
 
 ---
 
